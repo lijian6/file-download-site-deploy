@@ -1,0 +1,32 @@
+[
+  {
+    "key": "files/工具/OllyDbg.rar",
+    "size": 1048576,
+    "time": 1730000000
+  },
+  {
+    "key": "files/工具/插件/说明.txt",
+    "size": 2048,
+    "time": 1730000100
+  },
+  {
+    "key": "files/文档/手册.pdf",
+    "size": 5242880,
+    "time": 1730000200
+  },
+  {
+    "key": "files/",
+    "size": 0,
+    "time": 1730000000
+  },
+  {
+    "key": "index.html",
+    "size": 2192,
+    "time": 1730000000
+  },
+  {
+    "key": "assets/js/app.js",
+    "size": 100,
+    "time": 1730000000
+  }
+]

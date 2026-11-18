@@ -1,0 +1,31 @@
+# 构建产物
+out/
+dist/
+dist.zip
+down52-baota.zip
+*.zip
+
+# 部署时生成的数据
+list.json
+list.js
+descriptions.json
+rename-plan-*.json
+
+# 凭据与证书
+.oss_credentials
+*.pem
+*.key
+*.crt
+
+# 日志
+*.log
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+*.swp

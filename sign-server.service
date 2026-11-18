@@ -1,0 +1,30 @@
+# 放到 /etc/systemd/system/sign-server.service
+#
+# 启用：
+#   chmod +x /root/start-sign-server.sh
+#   systemctl daemon-reload
+#   systemctl enable --now sign-server
+#   systemctl status sign-server
+#   journalctl -u sign-server -f        # 看日志
+#   journalctl -u sign-server -n 50     # 看最近 50 行
+#
+# 改配置后：
+#   systemctl restart sign-server
+
+[Unit]
+Description=OSS signed download redirect (时效下载跳转)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/root/start-sign-server.sh
+Restart=always
+RestartSec=3
+# 只用本机回环，不对外暴露；对外统一走 Nginx 的 /dl/ 反代
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
